@@ -10,16 +10,16 @@ pipeline {
 	            echo "PATH = ${PATH}"
 	            echo "M2_HOME = ${M2_HOME}"
             }
-        }
-        stage('Build') {
+       }
+       stage('Build') {
             steps {
               sh 'mvn clean compile install'
             }
-        }
-        stage('Deploy') {
+       }
+       stage('Deploy') {
             steps {
                 echo 'Deploying .....'
             }
-        }
+       }
     }
 }
